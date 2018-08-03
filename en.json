@@ -1,0 +1,15 @@
+{
+  "collections": {
+    "general": {
+      "no_matches": "Sorry, there are no products in this collection",
+      "link_title": "Browse our {{ title }} collection",
+      "item_count": {
+        "one": "product",
+        "other": "products"
+      },
+      "collections": "Collections",
+      "collection": "Collection",
+      "credijamar_message": "Find your ideal set starting at $20.000"
+    }
+  }
+}

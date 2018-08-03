@@ -1,0 +1,36 @@
+<script id="search-results" type="text/x-handlebars-template">
+  {% raw %}
+    <div class="ajax-search-results">
+      <div class="ajax-search-results__container">
+        <span class="column-title">{% endraw %}{{ 'collections.general.item_count' | t: count: 2 | capitalize }}{% raw %}</span>
+        <div>{{#if results}}
+          <ul>
+            {{#each results}}<li>
+              <div class="grid">
+                <div class="grid__item one-quarter">
+                  <div class="product-thumbnail"{{#if thumbnail}} style="background-image: url({{thumbnail}});"{{/if}}></div>
+                </div><div class="grid__item three-quarters">
+                  <a href="{{url}}">{{{title}}}</a>
+                </div>
+              </div>
+            </li>{{/each}}
+          </ul>
+        {{else}}
+          <p class="push--top">{% endraw %}{{ 'collections.general.no_matches' | t }}{% raw %}</p>
+        {{/if}}</div>
+      </div>
+      <div class="ajax-search-results__container">
+        <span class="column-title">{% endraw %}{{ 'collections.general.collections' | t | capitalize }}{% raw %}</span>
+        <div>{{#if categories}}
+          <ul>
+            {{#each categories}}<li>
+              <a href="{{url}}">{{{title}}}</a>
+            </li>{{/each}}
+          </ul>
+        {{else}}
+          <p class="push--top">{% endraw %}{{ 'collections.collection.no_matches' | t }}{% raw %}</p>
+        {{/if}}</div>
+      </div>
+    </div>
+  {% endraw %}
+</script>
